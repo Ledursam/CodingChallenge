@@ -28,30 +28,37 @@
                             <div class="mb-3">
                                 <label class="form-label">Libellé *</label>
                                 <input type="text" class="form-control"  name="libelle" formControlName="libelle">
+                                <span class="text-danger" *ngIf="!libelle.valid || libelle.touched"> {{isLIbelleValid()}}</span>
                             </div>
+
                             <div class="mb-3">
                                 <label for="exampleInputPassword1" class="form-label">Superficie (m²) *</label>
-                                <input type="number" class="form-control"  name="superficie" formControlName="superficie">
+                                <input type="number" class="form-control"  name="superficie" formControlName="superficie" required>
+                                <span class="text-danger" *ngIf="!superficie.valid || superficie.touched"> {{isSuperficieValid()}}</span>
                             </div>
                         </div>
+
                         <div class="col-lg-6 col-md-6">
                             <div class="mb-3">
                                 <label class="form-label">Longitude</label>
                                 <input type="number" class="form-control"  name="longitude" formControlName="longitude">
+                                <span class="text-danger" *ngIf="!longitude.valid || longitude.touched"> {{isLongitudeValid()}}</span>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Latitude</label>
                                 <input type="number" class="form-control"  name="latitude" formControlName="latitude">
+                                <span class="text-danger" *ngIf="!latitude.valid || latitude.touched"> {{isLatitudeValid()}}</span>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
                             <div class="mb-3">
                                 <label class="form-label">Placer *</label>
                                 <input type="text" class="form-control"  name="placer" formControlName="emplacement">
+                                <span class="text-danger" *ngIf="!emplacement.valid || emplacement.touched"> {{isEmplacementValid()}}</span>
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Modifier</button>
+                    <button type="submit" class="btn btn-primary" [disabled] = "entrepotForm.invalid">Modifier</button>
                 </form>
             </div>
         </div>
