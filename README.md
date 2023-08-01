@@ -8,7 +8,7 @@ Ricva est une application web développée avec Angular 16.0.4. Elle permet de L
 
 ## Fonctionnalités
 
-- Engregistrer des entrepôts
+- Enregistrer des entrepôts
 - Modifier et supprimer des entrpôts
 
 ## Installation
